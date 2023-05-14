@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<input class="input" 
+    name="search" 
+    type="search"
+    placeholder="Search..."
+    hx-post="{% url 'htmx_search' %}"
+    hx-swap="innerHTML"
+    hx-trigger="keyup changed delay:500ms, search"
+    hx-target="#search-results"
+    hx-indicator="#searching_msg"/>
+
+<div id="search-results">
+    {% include "htmx/search_results.html" %}  
+</div>
+
+{% endblock %}

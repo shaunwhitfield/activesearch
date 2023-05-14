@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form>
+    <input type="text" id="search_field" placeholder="Search...">
+</form>
+<table id="sbpow_table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Religion</th>
+            <th>Denomination</th>
+            <th>Address 1</th>
+            <th>Address 2</th>
+            <th>City</th>
+            <th>ZIP</th>
+            <th>State</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.religion }}</td>
+                <td>{{ item.denomination }}</td>
+                <td>{{ item.address1 }}</td>
+                <td>{{ item.address2 }}</td>
+                <td>{{ item.city }}</td>
+                <td>{{ item.zip_code }}</td>
+                <td>{{ item.state }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+    var typingTimer;
+    var doneTypingInterval = 500;
+
+    $('#search_field').keyup(function() {
+        clearTimeout(typingTimer);
+        typingTimer = setTimeout(doneTyping(), doneTypingInterval);
+    });
+
+    function doneTyping() {
+        var search_term = $('#search_field').val();
+        $.ajax({
+            url: '/ajax/search/',
+            type: 'POST',
+            data: {
+                'search_term': search_term,
+                'csrfmiddlewaretoken': '{{ csrf_token }}'
+            },
+            dataType: 'json',
+            success: function(data) {
+                var results = JSON.parse(data.data);
+                var table_body = '';
+
+                for (var i = 0; i < results.length; i++) {
+                    var result = results[i];
+                    table_body += '<tr>';
+                    table_body += '<td>' + result.fields.name + '</td>';
+                    table_body += '<td>' + result.fields.religion + '</td>';
+                    table_body += '<td>' + result.fields.denomination + '</td>';
+                    table_body += '<td>' + result.fields.address1 + '</td>';
+                    table_body += '<td>' + result.fields.address2 + '</td>';
+                    table_body += '<td>' + result.fields.city + '</td>';
+                    table_body += '<td>' + result.fields.zip_code + '</td>';
+                    table_body += '<td>' + result.fields.state + '</td>';
+                    table_body += '</tr>';
+                }
+
+                $('#sbpow_table tbody').html(table_body);
+            }
+        });
+    }
+</script>
+
+{% endblock %} 

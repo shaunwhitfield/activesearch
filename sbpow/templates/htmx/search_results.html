@@ -1,0 +1,29 @@
+<span id="searching_msg" class="htmx-indicator"> 
+    Searching... 
+</span> 
+<table id="sbpow_table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Religion</th>
+            <th>Denomination</th>
+            <th>Address 1</th>
+            <th>Address 2</th>
+            <th>City</th>
+            <th>ZIP</th>
+            <th>State</th>
+        </tr>
+    </thead>
+    {% for item in items %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.religion }}</td>
+            <td>{{ item.denomination }}</td>
+            <td>{{ item.address1 }}</td>
+            <td>{{ item.address2 }}</td>
+            <td>{{ item.city }}</td>
+            <td>{{ item.zip_code }}</td>
+            <td>{{ item.state }}</td>
+        </tr>
+    {% endfor %}
+</table>

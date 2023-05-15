@@ -40,14 +40,3 @@ def ajax_search_view(request):
     else:
         items = PlaceOfWorship.objects.all().order_by('name')
         return render(request, 'ajax/search.html', {'items': items})
-
-# @csrf_exempt
-# def ajax_search_view(request):
-#     if request.method == "POST":
-#         search_term = request.POST.get('search_term', None)
-#         items = PlaceOfWorship.objects.filter(build_filter(search_term)).order_by('name')
-#         template = 'ajax/search.html'
-#     else:
-#         items = PlaceOfWorship.objects.all().order_by('name')
-#         template = 'ajax/search.html'
-#     return render(request=request, template_name=template, context={'items': items,})

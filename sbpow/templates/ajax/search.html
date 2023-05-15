@@ -41,7 +41,7 @@
 
     $('#search_field').keyup(function() {
         clearTimeout(typingTimer);
-        typingTimer = setTimeout(doneTyping(), doneTypingInterval);
+        typingTimer = setTimeout(function () {doneTyping();}, doneTypingInterval);
     });
 
     function doneTyping() {
@@ -73,6 +73,9 @@
                 }
 
                 $('#sbpow_table tbody').html(table_body);
+            },
+            error: function(){
+                alert("Something bad happened! :(");
             }
         });
     }

@@ -8,6 +8,9 @@ from django.http import JsonResponse
 
 from .models import PlaceOfWorship
 
+def home_view(request):
+    return render(request=request, template_name='home.html')
+
 def build_filter(search_term):
     filter_list = []
     for field_name in [f.name for f in PlaceOfWorship._meta.get_fields()]:
@@ -28,6 +31,17 @@ def htmx_search_view(request):
     else:
         items = PlaceOfWorship.objects.all().order_by('name')
         template = 'htmx/search.html'
+    return render(request=request, template_name=template, context={'items': items,})
+
+def alpine_search_view(request):
+    if request.method == "POST":
+        search_term = request.POST.get('search', None)
+        items = PlaceOfWorship.objects.filter(build_filter(search_term)).order_by('name')
+        print(search_term)
+        template = 'htmx/alpine/search_results.html'
+    else:
+        items = PlaceOfWorship.objects.all().order_by('name')
+        template = 'htmx/alpine/search.html'
     return render(request=request, template_name=template, context={'items': items,})
 
 @csrf_exempt

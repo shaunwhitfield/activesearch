@@ -1,0 +1,113 @@
+<span id="searching_msg" class="htmx-indicator"> 
+    Searching... 
+</span> 
+
+<div x-data="{
+    showModal: false,
+    name: '',
+    religion: '',
+    denomination: '',
+    created_date: '',
+    address1: '',
+    address2: '',
+    zip_code: '',
+    city: '',
+    state: '',
+}">
+
+    <table id="sbpow_table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Religion</th>
+                <th>Denomination</th>
+                <th>Address 1</th>
+                <th>Address 2</th>
+                <th>City</th>
+                <th>ZIP</th>
+                <th>State</th>
+            </tr>
+        </thead>
+        {% for item in items %}
+            <!-- <tr x-data="{ showModal: false, object: '{{item}}' }" @click="showModal = !showModal"> -->
+            <tr @click="
+                showModal = !showModal;
+                name ='{{item.name}}';
+                religion ='{{item.religion}}';
+                denomination ='{{item.denomination}}';
+                created_date ='{{item.created_date}}';
+                address1 ='{{item.address1}}';
+                address2 ='{{item.address2}}';
+                zip_code ='{{item.zip_code}}';
+                city ='{{item.city}}';
+                state ='{{item.state}}';
+            ">
+            <!-- <tr> -->
+                <td>{{ item.name }}</td>
+                <td>{{ item.religion }}</td>
+                <td>{{ item.denomination }}</td>
+                <td>{{ item.address1 }}</td>
+                <td>{{ item.address2 }}</td>
+                <td>{{ item.city }}</td>
+                <td>{{ item.zip_code }}</td>
+                <td>{{ item.state }}</td>
+                <div
+                    class="modal"
+                    role="dialog"
+                    tabindex="-1"
+                    x-show="showModal"
+                    x-on:keydown.escape="showModal = false"
+                    x-cloak
+                    x-transition
+                >
+                    <div class="modal-inner">
+                        <div class="modal-header">
+                            <h3>{{ item.name }}</h3>
+                            <button aria-label="Close" x-on:click="showModal = false">✖</button>
+                        </div>
+                        <p>Religion: {{ item.religion }}</p>
+                        <p>Denomination: {{ item.denomination }}</p>
+                        <p>Address 1: {{ item.address1 }}</p>
+                        <p>Address 2: {{ item.address2 }}</p>
+                        <p>City: {{ item.city }}</p>
+                        <p>ZIP: {{ item.zip_code }}</p>
+                        <p>State: {{ item.state }}</p>
+                        <button @click="showModal = false">Close</button>
+                    </div>
+                    <div class="modal-backdrop" @click="showModal = false"></div>
+                </div>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <div role="dialog"
+        aria-labelledby="modal1_label"
+        aria-modal="true"
+        tabindex="0"
+        x-show="showModal"
+        @click="showModal = false; $refs.modal1_button.focus()"
+        @click.away="showModal = false; $refs.modal1_button.focus()"
+        class="fixed top-0 left-0 w-full h-screen flex justify-center items-center"
+    >
+        <!-- Shaded backdrop: -->
+        <div class="absolute top-0 left-0 w-full h-screen bg-black opacity-60"aria-hidden="true"x-show="showModal"></div>
+        <div @click.stop=""
+            x-show="showModal"
+            class="flex flex-col rounded-lg shadow-lg overflow-hidden bg-white w-3/5 h-3/5 z-10"
+        >
+            <div class="p-6 border-b">
+                <h2 id="modal1_label"><span x-text="name"></span></h2>
+            </div>
+            <div class="p-6">
+                <p>Religion: <span x-text="religion"></span></p>
+                <p>Denomination: <span x-text="denomination"></span></p>
+                <p>Address 1: <span x-text="address1"></span></p>
+                <p x-if="address1 == address2">Address 2: <span x-text="address2"></span></p>
+                <p>City: <span x-text="city"></span></p>
+                <p>ZIP: <span x-text="zip_code"></span></p>
+                <p>State: <span x-text="state"></span></p>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -2,7 +2,7 @@
 
 {% block content %}
 <form>
-    <input type="text" id="search_field" placeholder="Search...">
+    <input class="search-input" type="text" id="search_field" placeholder="Search...">
 </form>
 <table id="sbpow_table">
     <thead>
@@ -41,6 +41,8 @@
 
     $('#search_field').keyup(function() {
         clearTimeout(typingTimer);
+        // wrap func call in lambda to actually delay it:
+        // https://stackoverflow.com/questions/9184702/settimeout-not-delaying-a-function-call
         typingTimer = setTimeout(function () {doneTyping();}, doneTypingInterval);
     });
 

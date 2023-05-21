@@ -5,10 +5,7 @@ h1, .h1, .page-title {
   font-weight: 700;
   line-height: 1.2em;
   font-family: GPC, "Arial Narrow", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
-}
-
-.mark-header a {
-  background-image: url('https://static.nd.edu/images/marks/gold-white/ndmark.svg');
+  float: left;
 }
 
 .mark-header {
@@ -17,10 +14,37 @@ h1, .h1, .page-title {
 	justify-self: right;
 }
 
-header {
+.mark-header a {
+	background: url('https://static.nd.edu/images/marks/gold-white/ndmark.svg') 50% 50% / contain no-repeat;
+	background-color: transparent;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
   border-top: 5px solid #ae9142;
-  margin-left: 160px; /* Same as the width of the sidenav */
+  margin-left: 160px;
+  padding-top: 10px;
   background-color: #183462;
+  padding-left: 10px;
+  height: 100px;
+}
+
+.header-img {
+  width: 300px;
+  display: block;
+  right: -100px;
+  /* margin-left: auto; */
+}
+
+.title-block {
+  float: left;
+  margin-left: 25px;
+}
+
+.title-img {
+  float: right;
+  margin-right: 200px;
 }
 
 .sidenav {
@@ -43,13 +67,18 @@ header {
   display: block;
 }
 
-.sidenav a:hover {
+.sidenav, h1 a:hover {
   color: #ae9142;
 }
 
+.container {
+  padding-top: 150px;
+  width: 100%;
+}
+
 .main {
-  margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
+  margin-left: 160px;
+  font-size: 18px;
   padding: 0px 10px;
 }
 
@@ -72,7 +101,7 @@ header {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #00823E;
   color: white;
 }
 
@@ -80,4 +109,13 @@ header {
   border: 1px solid #282828 !important;
   padding: 8px;
   display: block;
+}
+
+.search-bar {
+  position: fixed;
+  left: 160px;
+  top: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+  height: 40px;
 }

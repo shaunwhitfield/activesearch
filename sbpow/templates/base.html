@@ -15,18 +15,28 @@
     
 </head>
 <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
-    <header class="page-header">
-      <div class="container">
-          <h1><a href="/">South Bend Places of Worship</a></h1>
-      </div>
+    <header>
+        <div><h1><a href="/">South Bend Places of Worship</a></h1></div>
+        <div><p class="mark-header"><a href="https://www.nd.edu/"> 1</a></p></div>
     </header>
-    <main class="container">
-        <div class="row">
-            <div class="col">
-            {% block content %}
-            {% endblock %}
+
+    <div class="container">
+        <aside class="sidenav">
+            <ul>
+                <li><a href="{% url 'ajax_search' %}">AJAX</a></li>
+                <li><a href="{% url 'htmx_search' %}">HTMX</a></li>
+                <li><a href="{% url 'alpine_search' %}">AlpineJS</a></li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <div class="row">
+                <div class="col">
+                {% block content %}
+                {% endblock %}
+                </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 
 </body>

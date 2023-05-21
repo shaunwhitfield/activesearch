@@ -1,3 +1,58 @@
+h1, .h1, .page-title {
+	font-size: 3rem;
+  color: white;
+  font-size: 2.67rem;
+  font-weight: 700;
+  line-height: 1.2em;
+  font-family: GPC, "Arial Narrow", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+}
+
+.mark-header a {
+  background-image: url('https://static.nd.edu/images/marks/gold-white/ndmark.svg');
+}
+
+.mark-header {
+	grid-row: title;
+	grid-column: mark;
+	justify-self: right;
+}
+
+header {
+  border-top: 5px solid #ae9142;
+  margin-left: 160px; /* Same as the width of the sidenav */
+  background-color: #183462;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  background-image: url('https://campusministry.nd.edu/stylesheets/themes/ndt/3.0/images/hdr-faith-1200.jpg');
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #183462;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #ae9142;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
 #sbpow_table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;

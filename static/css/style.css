@@ -1,3 +1,87 @@
+h1, .h1, .page-title {
+	font-size: 3rem;
+  color: white;
+  font-size: 2.67rem;
+  font-weight: 700;
+  line-height: 1.2em;
+  font-family: GPC, "Arial Narrow", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  float: left;
+}
+
+.mark-header {
+	grid-row: title;
+	grid-column: mark;
+	justify-self: right;
+}
+
+.mark-header a {
+	background: url('https://static.nd.edu/images/marks/gold-white/ndmark.svg') 50% 50% / contain no-repeat;
+	background-color: transparent;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  border-top: 5px solid #ae9142;
+  margin-left: 160px;
+  padding-top: 10px;
+  background-color: #183462;
+  padding-left: 10px;
+  height: 100px;
+}
+
+.header-img {
+  width: 300px;
+  display: block;
+  right: -100px;
+  /* margin-left: auto; */
+}
+
+.title-block {
+  float: left;
+  margin-left: 25px;
+}
+
+.title-img {
+  float: right;
+  margin-right: 200px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  background-image: url('https://campusministry.nd.edu/stylesheets/themes/ndt/3.0/images/hdr-faith-1200.jpg');
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #183462;
+  display: block;
+}
+
+.sidenav, h1 a:hover {
+  color: #ae9142;
+}
+
+.container {
+  padding-top: 150px;
+  width: 100%;
+}
+
+.main {
+  margin-left: 160px;
+  font-size: 18px;
+  padding: 0px 10px;
+}
+
 #sbpow_table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -17,6 +101,36 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #00823E;
   color: white;
+}
+
+.search-input {
+  border: 1px solid #282828 !important;
+  padding: 8px;
+  /* display: block; */
+  display: inline-block;
+}
+
+.search-bar {
+  position: fixed;
+  left: 160px;
+  top: 100px;
+  width: 100%;
+  padding: 15px;;
+  background-color: #f2f2f2;
+  /* height: 40px; */
+  font-size: 12px;
+  display: inline-block;
+}
+
+.logo {
+  height: 25px;
+  display: block;
+  right: -100px;
+  display: inline-block;
+}
+
+.search-right-block {
+  float: right;
 }

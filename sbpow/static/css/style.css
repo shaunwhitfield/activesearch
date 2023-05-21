@@ -47,7 +47,13 @@ h1, .h1, .page-title {
   margin-right: 200px;
 }
 
+.corner-logo {
+  width: 130px;
+  margin: auto;
+}
+
 .sidenav {
+  border-top: 5px solid #ae9142;
   height: 100%;
   width: 160px;
   position: fixed;
@@ -108,7 +114,8 @@ h1, .h1, .page-title {
 .search-input {
   border: 1px solid #282828 !important;
   padding: 8px;
-  display: block;
+  /* display: block; */
+  display: inline-block;
 }
 
 .search-bar {
@@ -116,6 +123,23 @@ h1, .h1, .page-title {
   left: 160px;
   top: 100px;
   width: 100%;
-  background-color: #f2f2f2;
-  height: 40px;
+  padding: 15px;;
+  background-color: #eaeaea;
+  /* height: 40px; */
+  font-size: 12px;
+  display: inline-block;
 }
+
+.logo {
+  height: 25px;
+  display: block;
+  right: -100px;
+  display: inline-block;
+}
+
+.search-right-block {
+  float: right;
+  margin-right: 200px;
+
+}
+

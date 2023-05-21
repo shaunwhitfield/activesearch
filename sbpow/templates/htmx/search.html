@@ -1,16 +1,18 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 <div class="search-bar">
-<input class="search-input" 
-    name="search" 
-    type="search"
-    placeholder="Search..."
-    hx-post="{% url 'htmx_search' %}"
-    hx-swap="innerHTML"
-    hx-trigger="keyup changed delay:500ms, search"
-    hx-target="#search-results"
-    hx-indicator="#searching_msg"/>
+    <input class="search-input" 
+        name="search" 
+        type="search"
+        placeholder="Search..."
+        hx-post="{% url 'htmx_search' %}"
+        hx-swap="innerHTML"
+        hx-trigger="keyup changed delay:500ms, search"
+        hx-target="#search-results"
+        hx-indicator="#searching_msg"
+    />
+    <span class="search-right-block"><i>Active Search</i> implemented with <img class="logo" src="{% static 'img/htmx_logo.png' %}"></span>
 </div>
 
 <div id="search-results">

@@ -29,7 +29,6 @@
             </tr>
         </thead>
         {% for item in items %}
-            <!-- <tr x-data="{ showModal: false, object: '{{item}}' }" @click="showModal = !showModal"> -->
             <tr @click="
                 showModal = !showModal;
                 name ='{{item.name}}';
@@ -81,33 +80,29 @@
     </table>
 
     <div role="dialog"
-        aria-labelledby="modal1_label"
-        aria-modal="true"
-        tabindex="0"
         x-show="showModal"
-        @click="showModal = false; $refs.modal1_button.focus()"
-        @click.away="showModal = false; $refs.modal1_button.focus()"
+        @click="showModal = false;"
+        @click.away="showModal = false;"
         class="fixed top-0 left-0 w-full h-screen flex justify-center items-center"
     >
         <!-- Shaded backdrop: -->
-        <div class="absolute top-0 left-0 w-full h-screen bg-black opacity-60"aria-hidden="true"x-show="showModal"></div>
+        <div class="absolute top-0 left-0 w-full h-screen bg-black opacity-70" x-show="showModal"></div>
         <div @click.stop=""
             x-show="showModal"
-            class="flex flex-col rounded-lg shadow-lg overflow-hidden bg-white w-3/5 h-3/5 z-10"
+            class="flex flex-col rounded-lg shadow-lg overflow-hidden bg-white w-2/5 h-2/5 z-10"
         >
             <div class="p-6 border-b">
-                <h2 id="modal1_label"><span x-text="name"></span></h2>
+                <h2 x-text="name"></h2>
             </div>
             <div class="p-6">
                 <p>Religion: <span x-text="religion"></span></p>
                 <p>Denomination: <span x-text="denomination"></span></p>
                 <p>Address 1: <span x-text="address1"></span></p>
-                <p x-if="address1 == address2">Address 2: <span x-text="address2"></span></p>
+                <p x-show="address2 != 'None'">Address 2: <span x-text="address2"></span></p>
                 <p>City: <span x-text="city"></span></p>
                 <p>ZIP: <span x-text="zip_code"></span></p>
                 <p>State: <span x-text="state"></span></p>
             </div>
         </div>
     </div>
-
 </div>

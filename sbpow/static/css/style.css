@@ -9,8 +9,6 @@ h1, .h1, .page-title {
 }
 
 .mark-header {
-	grid-row: title;
-	grid-column: mark;
 	justify-self: right;
 }
 

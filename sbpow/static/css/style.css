@@ -8,6 +8,10 @@ h1, .h1, .page-title {
   float: left;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 .mark-header {
 	justify-self: right;
 }

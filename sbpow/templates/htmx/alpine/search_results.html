@@ -41,7 +41,6 @@
                 city ='{{item.city}}';
                 state ='{{item.state}}';
             ">
-            <!-- <tr> -->
                 <td>{{ item.name }}</td>
                 <td>{{ item.religion }}</td>
                 <td>{{ item.denomination }}</td>
@@ -50,35 +49,11 @@
                 <td>{{ item.city }}</td>
                 <td>{{ item.zip_code }}</td>
                 <td>{{ item.state }}</td>
-                <div
-                    class="modal"
-                    role="dialog"
-                    tabindex="-1"
-                    x-show="showModal"
-                    x-on:keydown.escape="showModal = false"
-                    x-cloak
-                    x-transition
-                >
-                    <div class="modal-inner">
-                        <div class="modal-header">
-                            <h3>{{ item.name }}</h3>
-                            <button aria-label="Close" x-on:click="showModal = false">✖</button>
-                        </div>
-                        <p>Religion: {{ item.religion }}</p>
-                        <p>Denomination: {{ item.denomination }}</p>
-                        <p>Address 1: {{ item.address1 }}</p>
-                        <p>Address 2: {{ item.address2 }}</p>
-                        <p>City: {{ item.city }}</p>
-                        <p>ZIP: {{ item.zip_code }}</p>
-                        <p>State: {{ item.state }}</p>
-                        <button @click="showModal = false">Close</button>
-                    </div>
-                    <div class="modal-backdrop" @click="showModal = false"></div>
-                </div>
             </tr>
         {% endfor %}
     </table>
 
+    <!-- Modal section -->
     <div role="dialog"
         x-show="showModal"
         @click="showModal = false;"
@@ -87,13 +62,12 @@
     >
         <!-- Shaded backdrop: -->
         <div class="absolute top-0 left-0 w-full h-screen bg-black opacity-70" x-show="showModal"></div>
+        <!-- The modal itself -->
         <div @click.stop=""
             x-show="showModal"
             class="flex flex-col rounded-lg shadow-lg overflow-hidden bg-white w-2/5 h-2/5 z-10"
         >
-            <div class="p-6 border-b">
-                <h2 x-text="name"></h2>
-            </div>
+            <h2 class="border-b p-2.5" x-text="name"></h2>
             <div class="p-6">
                 <p>Religion: <span x-text="religion"></span></p>
                 <p>Denomination: <span x-text="denomination"></span></p>

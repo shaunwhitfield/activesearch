@@ -1,0 +1,377 @@
+[
+{
+  "model": "sbpow.placeofworship",
+  "pk": 1,
+  "fields": {
+    "name": "St. Monica Catholic Church",
+    "religion": "Christianity",
+    "denomination": "Catholic",
+    "created_date": "2023-04-22T22:19:21Z",
+    "address1": "222 W Mishawaka Ave",
+    "address2": null,
+    "zip_code": "46545",
+    "city": "Mishawaka",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 2,
+  "fields": {
+    "name": "Basilica of the Sacred Heart",
+    "religion": "Christianity",
+    "denomination": "Catholic",
+    "created_date": "2023-04-22T22:20:26Z",
+    "address1": "101 Basilica Dr",
+    "address2": null,
+    "zip_code": "46556",
+    "city": "Notre Dame",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 3,
+  "fields": {
+    "name": "St. Therese Little Flower Catholic Church",
+    "religion": "Christianity",
+    "denomination": "Catholic",
+    "created_date": "2023-04-22T22:21:33Z",
+    "address1": "54191 N Ironwood Rd",
+    "address2": null,
+    "zip_code": "46635",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 4,
+  "fields": {
+    "name": "Saint Hedwig Catholic Church",
+    "religion": "Christianity",
+    "denomination": "Catholic",
+    "created_date": "2023-04-22T22:22:36Z",
+    "address1": "331 S Scott St",
+    "address2": null,
+    "zip_code": "46601",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 5,
+  "fields": {
+    "name": "Saint Patrick's Catholic Church",
+    "religion": "Christianity",
+    "denomination": "Catholic",
+    "created_date": "2023-04-22T22:23:31Z",
+    "address1": "309 S Taylor St",
+    "address2": null,
+    "zip_code": "46601",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 6,
+  "fields": {
+    "name": "Granger Community Church",
+    "religion": "Christianity",
+    "denomination": "Non-Denominational",
+    "created_date": "2023-04-22T22:24:26Z",
+    "address1": "630 E University Dr",
+    "address2": null,
+    "zip_code": "46530",
+    "city": "Granger",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 7,
+  "fields": {
+    "name": "First United Methodist Church Mishawaka",
+    "religion": "Christianity",
+    "denomination": "Methodist",
+    "created_date": "2023-04-22T22:25:51Z",
+    "address1": "201 E 3rd St",
+    "address2": null,
+    "zip_code": "46544",
+    "city": "Mishawaka",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 8,
+  "fields": {
+    "name": "St. Joseph Catholic Church",
+    "religion": "Christianity",
+    "denomination": "Catholic",
+    "created_date": "2023-04-22T22:27:05Z",
+    "address1": "220 W 4th St",
+    "address2": null,
+    "zip_code": "46544",
+    "city": "Mishawaka",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 9,
+  "fields": {
+    "name": "Sinai Synagogue",
+    "religion": "Judaism",
+    "denomination": "Conservative",
+    "created_date": "2023-04-22T22:28:14Z",
+    "address1": "1102 E Lasalle Ave",
+    "address2": null,
+    "zip_code": "46617",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 10,
+  "fields": {
+    "name": "Temple Beth-El",
+    "religion": "Judaism",
+    "denomination": "Reformed",
+    "created_date": "2023-04-22T22:29:12Z",
+    "address1": "305 W Madison St",
+    "address2": null,
+    "zip_code": "46601",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 11,
+  "fields": {
+    "name": "Hebrew Orthodox Congregation",
+    "religion": "Judaism",
+    "denomination": "Orthodox",
+    "created_date": "2023-04-22T22:29:56Z",
+    "address1": "3207 High St",
+    "address2": null,
+    "zip_code": "46614",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 12,
+  "fields": {
+    "name": "Islamic Society of Michiana",
+    "religion": "Islam",
+    "denomination": "Non-Denominational",
+    "created_date": "2023-04-22T22:30:58Z",
+    "address1": "3310 E Hepler St",
+    "address2": null,
+    "zip_code": "46635",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 13,
+  "fields": {
+    "name": "First Unitarian Church",
+    "religion": "Unitarian",
+    "denomination": "Non-Denominational",
+    "created_date": "2023-04-22T22:32:42Z",
+    "address1": "801 E Washington St",
+    "address2": null,
+    "zip_code": "46617",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 14,
+  "fields": {
+    "name": "Masjid Mujahideen",
+    "religion": "Islam",
+    "denomination": "Non-Denominational",
+    "created_date": "2023-05-10T22:34:51Z",
+    "address1": "431 Dundee St",
+    "address2": null,
+    "zip_code": "46619",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 15,
+  "fields": {
+    "name": "First Baptist Church of South Bend",
+    "religion": "Christianity",
+    "denomination": "Baptist",
+    "created_date": "2023-05-10T22:35:38Z",
+    "address1": "915 N Ironwood Dr",
+    "address2": null,
+    "zip_code": "46615",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 16,
+  "fields": {
+    "name": "South Bend City Church",
+    "religion": "Christianity",
+    "denomination": "Non-Denominational",
+    "created_date": "2023-05-10T22:40:10Z",
+    "address1": "Studebaker 112 635 South Lafayette Boulevard",
+    "address2": "Suite BB",
+    "zip_code": "46601",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 17,
+  "fields": {
+    "name": "Sophia Zen Center",
+    "religion": "Buddhism",
+    "denomination": "Non-Denominational",
+    "created_date": "2023-05-13T18:46:52Z",
+    "address1": "115 S St Peter St",
+    "address2": null,
+    "zip_code": "46617",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 18,
+  "fields": {
+    "name": "Hindu Temple and Community Center of Michiana",
+    "religion": "Hinduism",
+    "denomination": "Non-Denominational",
+    "created_date": "2023-05-13T18:49:02Z",
+    "address1": "19637 Dubois Ave",
+    "address2": null,
+    "zip_code": "46637",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 19,
+  "fields": {
+    "name": "St. Paul Lutheran Church",
+    "religion": "Christianity",
+    "denomination": "Lutheran",
+    "created_date": "2023-05-13T18:50:09Z",
+    "address1": "51490 Laurel Road",
+    "address2": null,
+    "zip_code": "46637",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 20,
+  "fields": {
+    "name": "Christ the King Lutheran Church",
+    "religion": "Christianity",
+    "denomination": "Lutheran",
+    "created_date": "2023-05-13T18:52:56Z",
+    "address1": "17195 Cleveland Road",
+    "address2": null,
+    "zip_code": "46635",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 21,
+  "fields": {
+    "name": "Our Redeemer Lutheran Church",
+    "religion": "Christianity",
+    "denomination": "Lutheran",
+    "created_date": "2023-05-13T18:54:10Z",
+    "address1": "805 S 29th St",
+    "address2": null,
+    "zip_code": "46615",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 22,
+  "fields": {
+    "name": "Gloria Dei Lutheran Church",
+    "religion": "Christianity",
+    "denomination": "Lutheran",
+    "created_date": "2023-05-13T18:55:04Z",
+    "address1": "225 Haney Ave",
+    "address2": null,
+    "zip_code": "46613",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 23,
+  "fields": {
+    "name": "Good Shepherd Lutheran Church",
+    "religion": "Christianity",
+    "denomination": "Lutheran",
+    "created_date": "2023-05-13T18:58:23Z",
+    "address1": "1021 Manchester Dr",
+    "address2": null,
+    "zip_code": "46615",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 24,
+  "fields": {
+    "name": "The Cathedral of St James",
+    "religion": "Christianity",
+    "denomination": "Episcopal",
+    "created_date": "2023-05-13T18:58:31Z",
+    "address1": "117 N Lafayette Blvd",
+    "address2": "#1507",
+    "zip_code": "46601",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+},
+{
+  "model": "sbpow.placeofworship",
+  "pk": 25,
+  "fields": {
+    "name": "Saint Michael and All Angels Episcopal Church",
+    "religion": "Christianity",
+    "denomination": "Episcopal",
+    "created_date": "2023-05-13T19:00:26Z",
+    "address1": "53720 N Ironwood Rd",
+    "address2": null,
+    "zip_code": "46635",
+    "city": "South Bend",
+    "state": "Indiana"
+  }
+}
+]

@@ -5,6 +5,8 @@
 ## Install Django
 `python -m pip install --upgrade pip`
 `pip install -r requirements.txt`
+## Migate
+`python manage.py migrate`
 ## Start server
 `python manage.py runserver`
 ## Import data

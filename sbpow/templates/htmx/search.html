@@ -7,9 +7,9 @@
         type="search"
         placeholder="Search..."
         hx-post="{% url 'htmx_search' %}"
-        hx-swap="innerHTML"
         hx-trigger="keyup changed delay:500ms, search"
         hx-target="#search-results"
+        hx-swap="innerHTML"
         hx-indicator="#searching_msg"
     />
     <span class="search-right-block"><img class="logo" src="{% static 'img/htmx_logo.png' %}"></span>
